@@ -60,7 +60,7 @@ async function fetchExchangeRate() {
 // Cron job scheduling
 cron.schedule('0 9 * * *', async () => {
     main();
-    console.log('The letter was sent successfully!');
+    console.log('The letter was sent successfully at 9:00 AM!');
 });
 
 // Callback function for API calls
