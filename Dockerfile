@@ -1,17 +1,17 @@
-# Используем базовый образ Node.js
+# Using the latest Node.js base image
 FROM node:latest
 
-# Устанавливаем рабочую директорию внутри контейнера
+# Set the working directory inside the container
 WORKDIR /app
 
-# Копируем package.json и package-lock.json для установки зависимостей
+# Copy package.json and package-lock.json to install dependencies
 COPY package*.json ./
 
-# Устанавливаем зависимости
+# Install dependencies
 RUN npm install
 
-# Копируем остальные файлы приложения
+# Copy the rest of the application files
 COPY . .
 
-# Команда, которая будет выполняться при запуске контейнера
+# Command to run when the container starts
 CMD ["node", "server.js"]
