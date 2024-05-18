@@ -58,7 +58,7 @@ async function fetchExchangeRate() {
 }
 
 // Cron job scheduling
-cron.schedule('* * * * *', async () => {
+cron.schedule('0 9 * * *', async () => {
     main();
     console.log('The letter was sent successfully!');
 });
