@@ -57,7 +57,7 @@ async function fetchExchangeRate() {
     }
 }
 
-// Cron job scheduling
+// Cron job scheduling (sending at 9am)
 cron.schedule('0 9 * * *', async () => {
     main();
     console.log('The letter was sent successfully at 9:00 AM!');
